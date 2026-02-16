@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | Neural Kavach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Identity Verification</h2>
+
+    <form method="POST">
+        <input type="email" name="email" placeholder="Username / Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Access System</button>
+    </form>
+
+    <p style="margin-top:15px;">New User? Register Here</p>
+</div>
+
+</body>
+</html>

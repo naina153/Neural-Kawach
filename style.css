@@ -1,0 +1,230 @@
+/* ================= THEME VARIABLES ================= */
+
+:root {
+    --bg-main: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    --bg-card: #393E46;
+    --text-main: #EEEEEE;
+    --accent: #00ADB5;
+    --sidebar-bg: #111;
+    --input-bg: #393E46;
+}
+
+.light-theme {
+    --bg-main: #f4f4f4;
+    --bg-card: #ffffff;
+    --text-main: #222831;
+    --accent: #007B83;
+    --sidebar-bg: #e0e0e0;
+    --input-bg: #ffffff;
+}
+
+/* ================= GLOBAL ================= */
+
+body {
+    margin: 0;
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid var(--accent);
+}
+
+.logo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: var(--bg-card);
+    border-left: 5px solid var(--accent);
+    border-radius: 10px;
+}
+
+.hero h1,
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: var(--accent);
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* ================= CARDS ================= */
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 25px;
+    width: 320px;
+    border-radius: 10px;
+    border-top: 4px solid var(--accent);
+    transition: 0.3s ease;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    color: var(--accent);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* ================= LOGIN ================= */
+
+.login-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background: var(--bg-card);
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-family: Georgia, serif;
+    color: var(--accent);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    background: var(--input-bg);
+    border: 1px solid var(--accent);
+    color: var(--text-main);
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* ================= FLASH CARDS ================= */
+
+.result-card {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.safe-card {
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+    box-shadow: 0 0 15px rgba(0,255,0,0.5);
+    color: #fff;
+}
+
+.danger-card {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= DASHBOARD ================= */
+
+.sidebar {
+    width: 240px;
+    background: var(--sidebar-bg);
+    padding: 30px 20px;
+    transition: 0.3s ease;
+}
+
+.sidebar h2 {
+    font-family: Georgia, serif;
+    color: var(--accent);
+}
+
+.sidebar a {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 8px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background: var(--bg-main);
+}
+
+.chart-container,
+.history-section {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+th {
+    background: var(--accent);
+    color: #fff;
+}

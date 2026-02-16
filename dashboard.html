@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | Neural Kavach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <div class="sidebar">
+        <h2>NEURAL KAVACH</h2>
+        <a href="#">Overview</a>
+        <a href="#">Email Scanner</a>
+        <a href="#">SMS Scanner</a>
+        <a href="#">URL Scanner</a>
+        <a href="/admin">Reports</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <div class="main-content">
+
+        <h1 class="dashboard-title">Security Analytics Dashboard</h1>
+
+        <!-- ================= RISK METER ================= -->
+
+        <div class="risk-section">
+            <h3>Current Threat Risk Level</h3>
+            <div class="risk-meter">
+                <div id="riskBar" class="risk-bar"></div>
+            </div>
+            <p id="riskText">Risk Level: 0%</p>
+        </div>
+
+        <!-- ================= CHART ================= -->
+
+        <div class="chart-container">
+            <h3>Live Cyber Attack Analytics</h3>
+            <canvas id="attackChart"></canvas>
+        </div>
+
+        <!-- ================= RECENT SCANS ================= -->
+
+        <div class="history-section">
+            <h3>Recent Scan Activity</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Input</th>
+                        <th>Status</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTable">
+                    <tr>
+                        <td>Email</td>
+                        <td>test@gmail.com</td>
+                        <td class="safe">Safe</td>
+                        <td>16 Feb 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

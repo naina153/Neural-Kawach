@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports | Neural Kavach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main-content">
+
+    <h1 style="font-family: Georgia, serif; color: var(--accent);">
+        Reported Cyber Incidents
+    </h1>
+
+    <!-- ================= REPORT TABLE ================= -->
+
+    <div class="history-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for report in reports %}
+                <tr>
+                    <td>{{ report[0] }}</td>
+                    <td>{{ report[1] }}</td>
+                    <td>{{ report[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= CYBER SAFETY GUIDE ================= -->
+
+    <div class="history-section" style="margin-top:40px;">
+        <h2 style="font-family: Georgia, serif; color: var(--accent);">
+            How to Deal with a Cyber Attack
+        </h2>
+
+        <ul style="line-height: 1.8;">
+            <li>Immediately disconnect the affected device from the internet.</li>
+            <li>Do not share OTPs, passwords, or banking details with anyone.</li>
+            <li>Change passwords of all important accounts.</li>
+            <li>Enable Two-Factor Authentication (2FA).</li>
+            <li>Report the incident to official authorities immediately.</li>
+        </ul>
+    </div>
+
+    <!-- ================= PRIVACY SECTION ================= -->
+
+    <div class="history-section" style="margin-top:40px;">
+        <h2 style="font-family: Georgia, serif; color: var(--accent);">
+            Privacy & Data Protection Guidelines
+        </h2>
+
+        <ul style="line-height: 1.8;">
+            <li>Use strong and unique passwords for each service.</li>
+            <li>Do not click suspicious links in SMS or emails.</li>
+            <li>Verify website URLs before making online payments.</li>
+            <li>Keep your operating system and apps updated.</li>
+            <li>Avoid using public Wi-Fi for financial transactions.</li>
+        </ul>
+    </div>
+
+    <!-- ================= GOVERNMENT SUPPORT ================= -->
+
+    <div class="history-section" style="margin-top:40px;">
+        <h2 style="font-family: Georgia, serif; color: var(--accent);">
+            Official Government Support
+        </h2>
+
+        <p>
+            If you have been a victim of cyber fraud, immediately report the incident through the
+            official Government of India portal:
+        </p>
+
+        <p>
+            🔗 <a href="https://cybercrime.gov.in" target="_blank" style="color: var(--accent);">
+            National Cyber Crime Reporting Portal
+            </a>
+        </p>
+
+        <p>
+            📞 <strong>Toll-Free Helpline: 1930</strong>
+        </p>
+
+        <p>
+            Early reporting increases the chances of recovering lost funds and preventing further damage.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
